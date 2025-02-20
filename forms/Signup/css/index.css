@@ -31,3 +31,7 @@
   display: block;
   margin-top: 24px;
 }
+.input-container label{
+  opacity: .6;
+  
+}
