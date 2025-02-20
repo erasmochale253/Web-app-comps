@@ -1,3 +1,14 @@
+#form input{
+  padding: 8px 0;
+  margin-top: 16px;
+  border: 2px solid grey;
+  border-right: none;
+  border-left: none;
+  border-top: none;
+  font-size: 13px;
+  width: 100%;
+}
 #gender-label{
   display: block;
+  margin-top: 24px;
 }
