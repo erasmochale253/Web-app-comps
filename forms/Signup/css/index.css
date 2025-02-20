@@ -1,13 +1,31 @@
-#form input{
-  padding: 8px 0;
-  margin-top: 16px;
-  border: 2px solid grey;
+#form{
+  margin: 24px;
+}
+.text-input{
+  padding: 14px 0 6px;
+  margin-top: 24px;
+  border: 2px solid lightgrey;
   border-right: none;
   border-left: none;
   border-top: none;
-  font-size: 13px;
+  font-size: 16px;
   width: 100%;
 }
+.text-input::placeholder{
+  color: gray;
+  opacity: .8;
+  /* transition: .1s all; */
+}
+.text-input:focus::placeholder, .text-input:not(:placeholder-shown)::placeholder{
+  color: hotpink;
+  font-size: 12px;
+  transform: translateY(-20px);
+}
+.text-input:focus{
+  outline-style: none;
+  border-bottom-color: hotpink;
+}
+
 #gender-label{
   display: block;
   margin-top: 24px;
