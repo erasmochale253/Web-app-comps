@@ -20,6 +20,7 @@
   color: hotpink;
   font-size: 12px;
   transform: translateY(-20px);
+  opacity: 1;
 }
 .text-input:focus{
   outline-style: none;
