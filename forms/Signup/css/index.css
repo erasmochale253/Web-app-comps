@@ -4,34 +4,43 @@
 .text-input{
   padding: 14px 0 6px;
   margin-top: 24px;
-  border: 2px solid lightgrey;
-  border-right: none;
-  border-left: none;
-  border-top: none;
+  border: none;
+  border-bottom: 2px solid lightgrey;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
   font-size: 16px;
   width: 100%;
 }
-.text-input::placeholder{
-  color: gray;
-  opacity: .8;
-  /* transition: .1s all; */
-}
-.text-input:focus::placeholder, .text-input:not(:placeholder-shown)::placeholder{
-  color: hotpink;
-  font-size: 12px;
-  transform: translateY(-20px);
-  opacity: 1;
-}
+
 .text-input:focus{
   outline-style: none;
   border-bottom-color: hotpink;
-}
-
+} 
 #gender-label{
   display: block;
-  margin-top: 24px;
+  margin-top: 40px;
 }
-.input-container label{
-  opacity: .6;
+.gender-ops:checked + label{
+  color: hotpink;
   
+}
+.input-container {
+  position: relative;
+}
+
+.label {
+  position: absolute;
+  left: 0;
+  top: 70%;
+  transform: translateY(-50%) scale(1);
+  transform-origin: top left;
+  transition: all 0.1s ease-in-out;
+  color: gray;
+  font-size: 16px;
+  pointer-events: none;
+}
+
+.text-input:focus + .label, .text-input:not(:placeholder-shown) + .label {
+  transform: translateY(-25px) scale(.7);
+  color: hotpink;
 }
