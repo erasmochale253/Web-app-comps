@@ -1,28 +1,72 @@
-#form{
-  margin: 24px;
+:root{
+  --margin-space: 24px;
+  --prim-color:#e500b1;
+  --sec-color: #006cd4;
 }
+body{
+  margin: 0;
+}
+#header{
+  display: flex;
+  align-items: center;
+  background-color: var(--sec-color);
+  color: whitesmoke;
+  padding: 0 var(--margin-space);
+}
+#header h1{
+  font-size: 24px;
+  margin: 16px;
+  margin-left: var(--margin-space);
+}
+.return-btn{
+  width: auto;
+  height: 32px;
+  background: none;
+  border: none;
+  color: whitesmoke;
+  font-weight: bold;
+  font-size: 24px;
+  padding: 0 6px;
+}
+.return-btn::before{
+  content: "\2190";
+}
+#form{
+  margin: var(--margin-space);
+  margin-bottom: 0;
+}
+
 .text-input{
   padding: 14px 0 6px;
   margin-top: 24px;
   border: none;
-  border-bottom: 2px solid lightgrey;
+  border-bottom: 1.5px solid lightgrey;
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px;
   font-size: 16px;
   width: 100%;
+  caret-color: var(--prim-color);
 }
 
 .text-input:focus{
   outline-style: none;
-  border-bottom-color: hotpink;
+  border-bottom-color: var(--prim-color);
 } 
-#gender-label{
-  display: block;
+#gender-section{
+  display: flex;
+  align-items: center;
   margin-top: 40px;
+  padding: 16px 0;
+  border: none;
+}
+.gender-ops{
+  margin: 0 3px 0 0;
+}
+.left{
+  margin-left: 16px;
 }
 .gender-ops:checked + label{
-  color: hotpink;
-  
+  color: var(--prim-color);
 }
 .input-container {
   position: relative;
@@ -42,5 +86,29 @@
 
 .text-input:focus + .label, .text-input:not(:placeholder-shown) + .label {
   transform: translateY(-25px) scale(.7);
-  color: hotpink;
+  color: var(--prim-color);
+}
+#submit-btns{
+  display: flex;
+  flex-wrap: wrap;
+  margin: var(--margin-space);
+  margin-top: 0;
+}
+#submit-btns button{
+  width: 100%;
+  height: 48px;
+  border: none;
+  font-size: 16px;
+  border-radius: 25px;
+  margin-top: var(--margin-space);
+  color: whitesmoke;
+  text-transform: uppercase;
+  font-weight: bold;
+  box-shadow: 0 3px 6px rgba(5,5,5, .2);
+}
+.reg-btn{
+  background-color: var(--prim-color);
+}
+.face-btn{
+  background-color: var(--sec-color);
 }
