@@ -12,10 +12,7 @@
 <body>
   
   <header id="header">
-    <button class="button" type="button">
-    <span>item</span>
-      
-    </button>
+    <button class="return-btn" type="button"></button>
     <h1>Sign Up</h1>
   </header>
   <form id="form" action="" method="get" accept-charset="utf-8">
@@ -40,15 +37,16 @@
       <label class="label" for="re-password">Re-enter password</label>
     </div>
     <fieldset id="gender-section">
-    <legend id="gender-label" for="">Gender</legend>
-      
-    <input type="radio" name="gender" id="male" class="gender-ops" value="Male"/>
-    <label for="male">Male</label>
-    <input type="radio" name="gender" id="female" class="gender-ops" value="female"/>
-    <label for="female">Female</label>
+      <legend>Gender</legend>
+      <input type="radio" name="gender" id="male" class="gender-ops" value="Male"/>
+      <label for="male">Male</label>
+      <input type="radio" name="gender" id="female" class="gender-ops left" value="female"/>
+      <label for="female">Female</label>
     </fieldset>
   </form>
-  <button class="reg-btn" type="submit">Register</button>
-  <button class="face-btn" type="submit">Register with Facebook</button>
+  <div id="submit-btns">
+    <button class="reg-btn" type="submit">Register</button>
+    <button class="face-btn" type="submit">Register with Facebook</button>
+  </div>
 </body>
 </html>
